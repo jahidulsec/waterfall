@@ -11,13 +11,11 @@
 .scroller__inner {
   --gap: 2rem;
   display: flex;
-  flex-wrap: wrap;
   gap: var(--gap);
 }
 
 .scroller[data-animated="true"] .scroller__inner {
   width: max-content;
-  flex-wrap: nowrap;
   animation: scroll 20s linear infinite;
 }
 
