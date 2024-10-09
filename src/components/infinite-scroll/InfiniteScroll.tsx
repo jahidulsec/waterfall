@@ -28,43 +28,44 @@ function InfiniteScroll() {
 
   return (
     <div className="scroller text-background">
-      <ul className={`scroller__inner`}>
+      <ul className={`scroller__inner text-sm`}>
         <li className={`flex items-center gap-2`}>
-          <Linkedin /> Linkedin
+          <Linkedin className="size-4" /> Linkedin
         </li>
         <li className={`flex items-center gap-2`}>
-          <Facebook /> Facebook
+          <Facebook className="size-4" /> Facebook
         </li>
         <li className={`flex items-center gap-2`}>
-          <Github /> Github
+          <Github className="size-4" /> Github
         </li>
         <li className={`flex items-center gap-2`}>
-          <Instagram /> Instagram
+          <Instagram className="size-4" /> Instagram
         </li>
         <li className={`flex items-center gap-2`}>
-          <Youtube /> Youtube
+          <Youtube className="size-4" /> Youtube
         </li>
         <li className={`flex items-center gap-2`}>
-          <Twitch /> Twitch
+          <Twitch className="size-4" /> Twitch
         </li>
 
+        
         <li className={`flex items-center gap-2`}>
-          <Linkedin /> Linkedin
+          <Linkedin className="size-4" /> Linkedin
         </li>
         <li className={`flex items-center gap-2`}>
-          <Facebook /> Facebook
+          <Facebook className="size-4" /> Facebook
         </li>
         <li className={`flex items-center gap-2`}>
-          <Github /> Github
+          <Github className="size-4" /> Github
         </li>
         <li className={`flex items-center gap-2`}>
-          <Instagram /> Instagram
+          <Instagram className="size-4" /> Instagram
         </li>
         <li className={`flex items-center gap-2`}>
-          <Youtube /> Youtube
+          <Youtube className="size-4" /> Youtube
         </li>
         <li className={`flex items-center gap-2`}>
-          <Twitch /> Twitch
+          <Twitch className="size-4" /> Twitch
         </li>
       </ul>
     </div>
