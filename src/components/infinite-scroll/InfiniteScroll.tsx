@@ -2,6 +2,14 @@
 
 import React, { useEffect } from "react";
 import "./infinite-scroll.css";
+import {
+  Facebook,
+  Github,
+  Instagram,
+  Linkedin,
+  Twitch,
+  Youtube,
+} from "lucide-react";
 
 function InfiniteScroll() {
   useEffect(() => {
@@ -19,14 +27,45 @@ function InfiniteScroll() {
   }, []);
 
   return (
-    <div className="scroller">
+    <div className="scroller text-background">
       <ul className={`scroller__inner`}>
-        {Array.from({ length: 10 }).map((item, index) => (
-          <li className={`text-nowrap`}>Logo {index + 1}</li>
-        ))}
-        {Array.from({ length: 10 }).map((item, index) => (
-          <li className={`text-nowrap`}>Logo {index + 1}</li>
-        ))}
+        <li className={`flex items-center gap-2`}>
+          <Linkedin /> Linkedin
+        </li>
+        <li className={`flex items-center gap-2`}>
+          <Facebook /> Facebook
+        </li>
+        <li className={`flex items-center gap-2`}>
+          <Github /> Github
+        </li>
+        <li className={`flex items-center gap-2`}>
+          <Instagram /> Instagram
+        </li>
+        <li className={`flex items-center gap-2`}>
+          <Youtube /> Youtube
+        </li>
+        <li className={`flex items-center gap-2`}>
+          <Twitch /> Twitch
+        </li>
+
+        <li className={`flex items-center gap-2`}>
+          <Linkedin /> Linkedin
+        </li>
+        <li className={`flex items-center gap-2`}>
+          <Facebook /> Facebook
+        </li>
+        <li className={`flex items-center gap-2`}>
+          <Github /> Github
+        </li>
+        <li className={`flex items-center gap-2`}>
+          <Instagram /> Instagram
+        </li>
+        <li className={`flex items-center gap-2`}>
+          <Youtube /> Youtube
+        </li>
+        <li className={`flex items-center gap-2`}>
+          <Twitch /> Twitch
+        </li>
       </ul>
     </div>
   );

@@ -4,7 +4,7 @@ import LogoSection from "../infinite-scroll/InfiniteScroll";
 
 function RightSection() {
   return (
-    <section className="hidden md:block transition-all duration-500 h-full rounded-lg p-3 xl:p-5 text-background">
+    <section className="hidden md:block transition-all duration-500 h-full rounded-lg text-background">
       <div className="bg-primary flex flex-col justify-between h-full rounded-lg pt-10 lg:pt-[4rem] 2xl:pt-[8rem] px-[4rem] relative">
         <div className="top">
           {/* header */}
@@ -20,7 +20,7 @@ function RightSection() {
 
           {/* images */}
           <div className="image relative my-10 w-full">
-            <MainTable className="max-[1030px]:w-full w-[56.25vh] max-w-[450px] overflow-hidden min-w-[18rem]" />
+            <MainTable className="max-[1030px]:w-full w-[56vh] max-w-[450px] overflow-hidden min-w-[18rem]" />
             <SecondTable className="max-[1030px]:w-4/5 max-[1030px]:-right-10 w-[45vh] max-w-[327px] absolute top-10 xl:top-[9vh] xl:-right-[3rem]" />
             <ThirdTable className="absolute w-[50vh] max-w-[373px] max-[1030px]:w-4/5 max-[1030px]:-right-2 max-[1030px]:top-36 min-w-[10rem] top-24 right-5 xl:top-[23vh] xl:-right-[1rem]" />
           </div>

@@ -8,6 +8,7 @@ import { toast } from "sonner";
 import Spinner from "../ui/spinner";
 import PasswordInput from "../inputs/PasswordInput";
 import Button from "../buttons/Button";
+import Link from "next/link";
 // import { adminLogin } from '@/app/actions/auth';
 
 const LoginForm = () => {
@@ -25,16 +26,27 @@ const LoginForm = () => {
       {/* form */}
       <form action={""} className="flex flex-col gap-5 my-8">
         <p>
-          <Label htmlFor="email">
-            Email address
-          </Label>
-          <Input className="mt-2" type="text" name="email" id="email" placeholder="name@company.com" />
+          <Label htmlFor="email">Email address</Label>
+          <Input
+            className="mt-2"
+            type="text"
+            name="email"
+            id="email"
+            placeholder="name@company.com"
+          />
           {/* {data?.error?.email && <p className="error-msg">{data.error.email}</p>} */}
         </p>
 
         <PasswordInput>
           {/* {data?.error?.password && <p className="error-msg">{data.error.password}</p>} */}
         </PasswordInput>
+
+        <Link
+          href={""}
+          className="text-sm text-muted-foreground text-right -mt-2"
+        >
+          Forget password?
+        </Link>
 
         <SubmitButton />
       </form>
