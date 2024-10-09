@@ -19,10 +19,10 @@ function RightSection() {
           </div>
 
           {/* images */}
-          <div className="image relative my-5 lg:mb-14 lg:my-10 w-full">
-            <MainTable className="lg:w-[80%]" />
-            <SecondTable className="absolute w-[75%] lg:w-[70%] top-[20%] lg:top-[18%] -right-[10%]" />
-            <ThirdTable className="absolute w-[85%] lg:w-[70%] -bottom-[10%] lg:right-[5%] -right-[10%]" />
+          <div className="image relative my-5 lg:mb-14 lg:my-4 w-full h-[18rem]">
+            <MainTable className="absolute w-[90%] lg:w-[76%]" />
+            <SecondTable className="absolute w-[75%] lg:w-[60%] top-[15%] lg:top-[25%] -right-[10%] lg:right-[0%]" />
+            <ThirdTable className="absolute w-[80%] lg:w-[60%] top-[50%] lg:top-[65%] lg:right-[10%] -right-[5%]" />
           </div>
         </div>
 

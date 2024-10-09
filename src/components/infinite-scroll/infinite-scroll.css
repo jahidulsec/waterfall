@@ -1,6 +1,6 @@
 /* scroller */
 .scroller {
-  --primary: #7c3aed;
+  --primary: hsl(var(--primary));
 
 
   mask: linear-gradient(90deg, transparent, var(--primary) 20%, var(--primary) 80%, transparent);
