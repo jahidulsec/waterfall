@@ -7,8 +7,8 @@ export default function AuthProjectLayout({
   children: React.ReactNode;
 }) {
   return (
-    <main className="grid grid-cols-2 3xl:container mx-auto min-h-screen">
-      <section>{children}</section>
+    <main className="grid grid-cols-1 md:grid-cols-2 3xl:container mx-auto min-h-screen">
+      {children}
       <RightSection />
     </main>
   );

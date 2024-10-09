@@ -1,9 +1,9 @@
 "use client";
 
 import React, { useEffect } from "react";
-import "./logo-section.css";
+import "./infinite-scroll.css";
 
-function LogoSection() {
+function InfiniteScroll() {
   useEffect(() => {
     const scrollers = document.querySelectorAll(".scroller");
 
@@ -32,4 +32,4 @@ function LogoSection() {
   );
 }
 
-export default LogoSection;
+export default InfiniteScroll;
