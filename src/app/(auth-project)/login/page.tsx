@@ -10,7 +10,7 @@ function LoginPage() {
       <div className="header mb-[3rem]">
         <h1 className="text-3xl mb-0.5 font-semibold">Waterfall Merger</h1>
         <p className="text-sm">
-          If you don’t have an account{" "}
+          If you don&apos;t have an account{" "}
           <Link href={""} className="text-primary">
             Click here
           </Link>
