@@ -8,9 +8,9 @@ export default function AuthProjectLayout({
   children: React.ReactNode;
 }) {
   return (
-    <main className=" relative grid grid-cols-1 md:grid-cols-2 3xl:container mx-auto min-h-screen p-3 xl:p-5">
+    <main className=" relative grid grid-cols-1 md:grid-cols-2 3xl:container mx-auto min-h-screen">
       {/* logo */}
-      <div className="logo fixed top-3 left-3 xl:top-5 xl:left-5 flex items-center gap-2 text-primary">
+      <div className="logo absolute top-3 left-3 xl:top-5 xl:left-5 flex items-center gap-2 text-primary">
         <Waves className="size-4" />
         <p className="font-semibold">Logo here</p>
       </div>
