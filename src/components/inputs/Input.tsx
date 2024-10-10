@@ -8,11 +8,11 @@ type InputProps = ComponentProps<"input"> & {
     label?: string
 }
 
-function Input({ label, id, className, children, ...props }: InputProps) {
+function Input({ label, id, type, className, children, ...props }: InputProps) {
   return (
     <p>
       <Label htmlFor={id}>{label}</Label>
-      <InputUi id={id} className={cn("mt-2", className)} {...props} />
+      <InputUi type={type} id={id} className={cn("mt-2", className)} {...props} />
       {children}
     </p>
   );

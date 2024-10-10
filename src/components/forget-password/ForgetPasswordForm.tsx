@@ -1,30 +1,56 @@
 "use client";
 
 import React from "react";
-import { Input } from "../ui/input";
-import { Label } from "../ui/label";
-import { useFormStatus } from "react-dom";
 import Button from "../buttons/Button";
-import SubmitButton from "../buttons/SubmitButton";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
+import { forgetPasswordSchema } from "@/schema/forget-password";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { wait } from "@/lib/utils";
+import { toast } from "sonner";
+import { Label } from "../ui/label";
+import { Input } from "../ui/input";
+
+type FormValues = z.infer<typeof forgetPasswordSchema>;
 
 export default function ForgetPasswordForm() {
+  const {
+    register,
+    handleSubmit,
+    formState: { isLoading, errors, isSubmitting },
+  } = useForm<FormValues>({
+    resolver: zodResolver(forgetPasswordSchema),
+  });
+
+  const onSubmit = async (data: FormValues) => {
+    await wait(1000);
+    toast.success("An password reset link is sent to your email");
+  };
+
   return (
-    <form className="flex flex-col gap-5 my-2">
+    <form
+      onSubmit={handleSubmit(onSubmit)}
+      className="flex flex-col gap-5 my-2"
+    >
       <p>
         <Label htmlFor="email">Email address</Label>
         <Input
-          className="mt-2"
-          type="text"
-          name="email"
+        className="mt-2"
           id="email"
+          {...register("email")}
           placeholder="name@company.com"
         />
-        {/* {data?.error?.email && <p className="error-msg">{data.error.email}</p>} */}
+        {errors.email && <p className="error-msg">{errors.email.message}</p>}
       </p>
 
       <div className="flex flex-col gap-2">
-        <SubmitButton title="Send Reset Link" />
-
+        <Button
+          type="submit"
+          disabled={isLoading || isSubmitting}
+          isLoading={isLoading || isSubmitting}
+        >
+          Send Reset Link
+        </Button>
         <Button type="button" variant={"link"}>
           Return to Login
         </Button>
@@ -32,4 +58,3 @@ export default function ForgetPasswordForm() {
     </form>
   );
 }
-
