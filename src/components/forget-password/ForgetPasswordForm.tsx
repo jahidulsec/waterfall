@@ -10,6 +10,7 @@ import { wait } from "@/lib/utils";
 import { toast } from "sonner";
 import { Label } from "../ui/label";
 import { Input } from "../ui/input";
+import Link from "next/link";
 
 type FormValues = z.infer<typeof forgetPasswordSchema>;
 
@@ -35,7 +36,7 @@ export default function ForgetPasswordForm() {
       <p>
         <Label htmlFor="email">Email address</Label>
         <Input
-        className="mt-2"
+          className="mt-2"
           id="email"
           {...register("email")}
           placeholder="name@company.com"
@@ -52,7 +53,7 @@ export default function ForgetPasswordForm() {
           Send Reset Link
         </Button>
         <Button type="button" variant={"link"}>
-          Return to Login
+          <Link href={"/login"}>Return to Login</Link>
         </Button>
       </div>
     </form>

@@ -35,7 +35,7 @@ const LoginForm = () => {
           )}
         </Input>
 
-        <PasswordInput>
+        <PasswordInput name="password" id="password">
           {data?.error?.password && (
             <p className="error-msg">{data.error.password}</p>
           )}
