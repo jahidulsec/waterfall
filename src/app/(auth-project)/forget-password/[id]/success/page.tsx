@@ -1,5 +1,6 @@
 import { ShieldCheck } from "@/components/assets/success";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 import React from "react";
 
 function PasswordResetSuccessPage() {
@@ -11,11 +12,14 @@ function PasswordResetSuccessPage() {
         <h2 className="text-4xl font-semibold text-foreground/85">Success!</h2>
 
         <p className="text-center text-sm">
-          Your password has been updated and is secure. <br /> You can now login again
+          Your password has been updated and is secure. <br /> You can now login
+          again
         </p>
       </article>
 
-      <Button>Continue</Button>
+      <Button asChild>
+        <Link href={'/login'}>Continue</Link>
+      </Button>
     </div>
   );
 }

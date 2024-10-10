@@ -52,7 +52,7 @@ export default function ForgetPasswordForm() {
         >
           Send Reset Link
         </Button>
-        <Button type="button" variant={"link"}>
+        <Button asChild type="button" variant={"link"}>
           <Link href={"/login"}>Return to Login</Link>
         </Button>
       </div>

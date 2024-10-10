@@ -5,6 +5,7 @@ import Spinner from "../ui/spinner";
 
 type CustomButtonProps = ComponentProps<"button"> & {
   isLoading?: boolean;
+  asChild?: boolean;
   size?: "default" | "sm" | "lg" | "icon" | null | undefined;
   variant?:
     | "default"
@@ -23,10 +24,11 @@ function Button({
   variant= 'default',
   size='default',
   className,
+  asChild=false,
   ...props
 }: CustomButtonProps) {
   return (
-    <ButtonUI className={cn('rounded-lg px-10 text-center', className)} {...props} variant={variant} size={size}>
+    <ButtonUI asChild={asChild} className={cn('rounded-lg px-10 text-center', className)} {...props} variant={variant} size={size}>
       {isLoading && <Spinner className="mr-2" />}
       <span>{children}{isLoading && '...'}</span>
     </ButtonUI>
