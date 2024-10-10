@@ -9,6 +9,7 @@ import Spinner from "../ui/spinner";
 import PasswordInput from "../inputs/PasswordInput";
 import Button from "../buttons/Button";
 import Link from "next/link";
+import SubmitButton from "../buttons/SubmitButton";
 // import { adminLogin } from '@/app/actions/auth';
 
 const LoginForm = () => {
@@ -42,25 +43,17 @@ const LoginForm = () => {
         </PasswordInput>
 
         <Link
-          href={""}
+          href={"/forget-password"}
           className="text-sm text-muted-foreground text-right -mt-2"
         >
           Forget password?
         </Link>
 
-        <SubmitButton />
+        <SubmitButton title="Login" />
       </form>
     </>
   );
 };
 
-const SubmitButton = () => {
-  const { pending } = useFormStatus();
-  return (
-    <Button type="submit" disabled={pending} isLoading={pending}>
-      Login
-    </Button>
-  );
-};
 
 export default LoginForm;

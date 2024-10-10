@@ -1207,7 +1207,7 @@ function MainTable({className}: ComponentProps<'div'>) {
             filterUnits="userSpaceOnUse"
             color-interpolation-filters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix
               in="SourceAlpha"
               type="matrix"
@@ -1241,7 +1241,7 @@ function MainTable({className}: ComponentProps<'div'>) {
             filterUnits="userSpaceOnUse"
             color-interpolation-filters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix
               in="SourceAlpha"
               type="matrix"
@@ -1275,7 +1275,7 @@ function MainTable({className}: ComponentProps<'div'>) {
             filterUnits="userSpaceOnUse"
             color-interpolation-filters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix
               in="SourceAlpha"
               type="matrix"
@@ -1309,7 +1309,7 @@ function MainTable({className}: ComponentProps<'div'>) {
             filterUnits="userSpaceOnUse"
             color-interpolation-filters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix
               in="SourceAlpha"
               type="matrix"
@@ -1343,7 +1343,7 @@ function MainTable({className}: ComponentProps<'div'>) {
             filterUnits="userSpaceOnUse"
             color-interpolation-filters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix
               in="SourceAlpha"
               type="matrix"
@@ -1430,7 +1430,7 @@ function MainTable({className}: ComponentProps<'div'>) {
             filterUnits="userSpaceOnUse"
             color-interpolation-filters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix
               in="SourceAlpha"
               type="matrix"
@@ -1463,8 +1463,8 @@ function MainTable({className}: ComponentProps<'div'>) {
             y2="93.3514"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#2FFF8D" stop-opacity="0.12" />
-            <stop offset="1" stop-color="#66FF2E" stop-opacity="0" />
+            <stop stopColor="#2FFF8D" stopOpacity="0.12" />
+            <stop offset="1" stopColor="#66FF2E" stopOpacity="0" />
           </linearGradient>
           <linearGradient
             id="paint1_linear_2045_44714"
@@ -1474,8 +1474,8 @@ function MainTable({className}: ComponentProps<'div'>) {
             y2="84.9236"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#2F4BFF" stop-opacity="0.12" />
-            <stop offset="1" stop-color="#2E62FF" stop-opacity="0" />
+            <stop stopColor="#2F4BFF" stopOpacity="0.12" />
+            <stop offset="1" stopColor="#2E62FF" stopOpacity="0" />
           </linearGradient>
           <clipPath id="clip0_2045_44714">
             <rect width="450.098" height="381.807" rx="8.27766" fill="white" />

@@ -1,11 +1,11 @@
 /* scroller */
 .scroller {
-  --primary: hsl(var(--primary));
+  --primary-clr: hsl(var(--primary));
 
 
-  mask: linear-gradient(90deg, transparent, var(--primary) 20%, var(--primary) 80%, transparent);
-  -webkit-mask: linear-gradient(90deg, transparent, var(--primary) 20%, var(--primary) 80%, transparent);
-  background: var(--primary);
+  mask: linear-gradient(90deg, transparent, var(--primary-clr) 20%, var(--primary-clr) 80%, transparent);
+  -webkit-mask: linear-gradient(90deg, transparent, var(--primary-clr) 20%, var(--primary-clr) 80%, transparent);
+  background: var(--primary-clr);
 }
 
 .scroller__inner {
