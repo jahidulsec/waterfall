@@ -4,8 +4,6 @@ import React from "react";
 import { Input } from "../ui/input";
 import { Label } from "../ui/label";
 import PasswordInput from "../inputs/PasswordInput";
-import { useFormStatus } from "react-dom";
-import Button from "../buttons/Button";
 import SubmitButton from "../buttons/SubmitButton";
 
 export default function ResetPasswordForm() {
@@ -31,9 +29,7 @@ export default function ResetPasswordForm() {
         {/* {data?.error?.password && <p className="error-msg">{data.error.password}</p>} */}
       </PasswordInput>
 
-        <SubmitButton title="Save" />
+      <SubmitButton title="Save" />
     </form>
   );
 }
-
-

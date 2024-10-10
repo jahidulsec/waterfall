@@ -1,50 +1,43 @@
 "use client";
 
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import React, { useEffect, useState } from "react";
-import { useFormState, useFormStatus } from "react-dom";
 import { toast } from "sonner";
-import Spinner from "../ui/spinner";
 import PasswordInput from "../inputs/PasswordInput";
-import Button from "../buttons/Button";
 import Link from "next/link";
 import SubmitButton from "../buttons/SubmitButton";
-// import { adminLogin } from '@/app/actions/auth';
+import Input from "../inputs/Input";
+import { useFormState } from "react-dom";
+import { login } from "@/actions/auth";
+import { useEffect } from "react";
 
 const LoginForm = () => {
-  const [showPassword, setShowPassword] = useState(false);
-  //   const [data, action] = useFormState(adminLogin, null);
+  const [data, action] = useFormState(login, null);
 
-  //   useEffect(() => {
-  //     if (data?.db != null) {
-  //       toast.error(data.db);
-  //     }
-  //   });
+  useEffect(() => {
+    if(data?.toast != null) {
+      toast.error(data.toast)
+    } 
+    console.log(data?.toast)
+  }, [data])
 
   return (
     <>
       {/* form */}
-      <form action={""} className="flex flex-col gap-5 my-8">
-        <p>
-          <Label htmlFor="email">Email address</Label>
-          <Input
-            className="mt-2"
-            type="text"
-            name="email"
-            id="email"
-            placeholder="name@company.com"
-          />
-          {/* {data?.error?.email && <p className="error-msg">{data.error.email}</p>} */}
-        </p>
+      <form action={action} className="flex flex-col gap-5 my-8">
+        <Input label="Email address" type="email" id="email" name="email">
+          {data?.error?.email && (
+            <p className="error-msg">{data.error.email}</p>
+          )}
+        </Input>
 
         <PasswordInput>
-          {/* {data?.error?.password && <p className="error-msg">{data.error.password}</p>} */}
+          {data?.error?.password && (
+            <p className="error-msg">{data.error.password}</p>
+          )}
         </PasswordInput>
 
         <Link
           href={"/forget-password"}
-          className="text-sm text-muted-foreground text-right -mt-2"
+          className="text-sm text-muted-foreground text-right -mt-2 self-end hover:text-primary"
         >
           Forget password?
         </Link>
@@ -54,6 +47,5 @@ const LoginForm = () => {
     </>
   );
 };
-
 
 export default LoginForm;

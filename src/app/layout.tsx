@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import ProgressProvider from "@/contexts/ProgressProvider";
+import { Toaster } from "@/components/ui/sonner";
 
 export const metadata: Metadata = {
   title: "Waterfall",
@@ -15,7 +16,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`antialiased`}>
-        <ProgressProvider>{children}</ProgressProvider>
+        <ProgressProvider>
+          {children}
+          <Toaster richColors closeButton position='top-right' />
+        </ProgressProvider>
       </body>
     </html>
   );
