@@ -5,7 +5,7 @@ function StageLayout({ children }: { children: React.ReactNode }) {
   return (
     <section className="h-full pt-20">
       <Steps />
-      {children}
+      <section className="pt-20">{children}</section>
     </section>
   );
 }

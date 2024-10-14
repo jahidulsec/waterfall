@@ -13,7 +13,7 @@ function Steps() {
   });
 
   return (
-    <div className="pb-10 relative flex items-center w-full">
+    <div className="relative flex items-center w-full">
       {stage.map((item, index) => (
         <Fragment key={item.id}>
           <div className="relative w-full">
