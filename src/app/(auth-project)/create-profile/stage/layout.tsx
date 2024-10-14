@@ -1,4 +1,4 @@
-import Steps from "@/components/create-project/Steps";
+import Steps from "@/components/steps/Steps";
 import React from "react";
 
 function StageLayout({ children }: { children: React.ReactNode }) {

@@ -35,7 +35,7 @@ function CardSection() {
         </CardContent>
       </Card>
 
-      <Card className="group hover:border-secondary/50 hover:cursor-pointer">
+      <Card className="group hover:border-secondary/50 hover:cursor-pointer" onClick={() => {router.push(pathname + `/stage/deal`)}}>
         <CardContent className="flex gap-3 p-4 group-hover:bg-secondary/5">
           <div className="logo w-[52px]">
             <CircleTwo />

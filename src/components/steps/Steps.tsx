@@ -24,7 +24,7 @@ function Steps() {
                   : "text-muted-foreground"
               }`}
             >
-              <h4 className={`text-xs h-10 text-center line-clamp-2 `}>
+              <h4 className={`text-xs h-10 text-center line-clamp-2 ${(index + 1) <= numOfStepsComplete ? 'text-secondary': ''}`}>
                 {item.name}
               </h4>
               <div className="icon">
