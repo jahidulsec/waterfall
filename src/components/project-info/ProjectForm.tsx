@@ -30,7 +30,7 @@ function ProjectForm() {
         <Button asChild variant={"outline"} type="button">
           <Link href={"/create-profile/stage/deal"}>Previous</Link>
         </Button>
-        <Button type="button">
+        <Button asChild type="button">
           <Link href={"/create-profile/stage/cap-table"}>Continue</Link>
         </Button>
       </div>
