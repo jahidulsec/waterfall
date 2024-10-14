@@ -3,7 +3,10 @@ import React from "react";
 
 export default function ForgetPasswordPage() {
   return (
-    <>
+    // <>
+
+    // </>
+    <div className="">
       <div className="header mb-[2rem]">
         <h1 className="text-3xl mb-2 font-medium">Forgot Password?</h1>
         <p className="text-sm text-muted-foreground">
@@ -13,6 +16,6 @@ export default function ForgetPasswordPage() {
       </div>
 
       <ForgetPasswordForm />
-    </>
+    </div>
   );
 }

@@ -2,6 +2,7 @@
 
 import React from "react";
 import Button from "../buttons/Button";
+import {Button as ButtonUI} from '@/components/ui/button';
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { forgetPasswordSchema } from "@/schema/forget-password";
@@ -52,9 +53,9 @@ export default function ForgetPasswordForm() {
         >
           Send Reset Link
         </Button>
-        <Button asChild type="button" variant={"link"}>
+        <ButtonUI asChild type="button" variant={"link"}>
           <Link href={"/login"}>Return to Login</Link>
-        </Button>
+        </ButtonUI>
       </div>
     </form>
   );
