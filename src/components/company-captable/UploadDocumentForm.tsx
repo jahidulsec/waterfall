@@ -25,7 +25,8 @@ function UploadDocumentForm() {
   return (
     <form className="flex flex-col gap-5 mb-10">
       <DnDFileInput
-        onChange={handleChange}
+        fileState={uploadedFiles}
+        onFileChange={setUploadedFiles}
       />
 
       <div className="uploaded-files flex flex-col gap-5">
