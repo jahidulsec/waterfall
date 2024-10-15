@@ -3,6 +3,8 @@
 import React, { useState } from "react";
 import DnDFileInput from "../inputs/DnDFileInput";
 import FileCard from "./FileCard";
+import { Button } from "../ui/button";
+import Link from "next/link";
 
 function UploadDocumentForm() {
   const [uploadedFiles, setUploadedFiles] = useState<(File | undefined)[]>([]);
@@ -30,6 +32,15 @@ function UploadDocumentForm() {
               }}
             />
           ))}
+      </div>
+
+      <div className="buttons flex justify-end gap-5 mt-10">
+        <Button asChild variant={"outline"} type="button">
+          <Link href={"/create-profile/stage/project-info"}>Previous</Link>
+        </Button>
+        <Button asChild type="button">
+          <Link href={"/"}>Continue</Link>
+        </Button>
       </div>
     </form>
   );
