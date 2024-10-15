@@ -1,7 +1,9 @@
 "use client";
 
-import { Files, Upload } from "lucide-react";
+import { Upload } from "lucide-react";
 import React, { ComponentProps } from "react";
+import { toast } from "sonner";
+
 
 type DnDFileInputProps = ComponentProps<"input"> & {
   fileState: (File | undefined)[],
@@ -57,7 +59,8 @@ function DnDFileInput({ fileState, onFileChange, accept, ...props }: DnDFileInpu
         });
       }
     } else {
-      console.log("this is not an image");
+      toast.warning(`This ${fileType.split('/').pop()} is not acceptable`)
+      console.log('not acceptable')
     }
 
     setDragActive(false);
@@ -65,7 +68,6 @@ function DnDFileInput({ fileState, onFileChange, accept, ...props }: DnDFileInpu
 
   return (
     <p
-      className=""
       onDragOver={handleDragOver}
       onDragLeave={handleDragLeave}
       onDrop={handleDrop}

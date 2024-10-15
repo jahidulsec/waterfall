@@ -5,13 +5,15 @@ import { Dot, File, X } from "lucide-react";
 
 type FileCardProps = {
   name: string;
-  size: number,
-  progress: number
+  size: number;
+  progress: number;
+  onClose: () => void;
+  index: number;
 };
 
-function FileCard({name, size, progress}: FileCardProps) {
-
-    const fileSize = (size < 1024) ? `${size} KB`: `${((size) / (1024 * 1024)).toFixed(2)} MB` 
+function FileCard({ index, name, size, progress, onClose }: FileCardProps) {
+  const fileSize =
+    size < 1024 ? `${size} KB` : `${(size / (1024 * 1024)).toFixed(2)} MB`;
 
   return (
     <div className="border rounded-lg p-4 flex flex-col gap-2">
@@ -31,7 +33,13 @@ function FileCard({name, size, progress}: FileCardProps) {
         </div>
 
         <div className="right flex flex-col items-end gap-1">
-          <Button type="button" className="h-6 w-6" variant={"ghost"} size={"icon"}>
+          <Button
+            type="button"
+            className="h-6 w-6"
+            variant={"ghost"}
+            size={"icon"}
+            onClick={onClose}
+          >
             <X className="size-4" />
           </Button>
           <p className="text-xs">{progress}%</p>
