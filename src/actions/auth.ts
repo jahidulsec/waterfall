@@ -16,9 +16,6 @@ export const login = async (prevState: unknown, formData: FormData) => {
 
   const data = result.data;
 
-
-  console.log(process.env.ADMIN_EMAIL)
-
   if(data.email != process.env.ADMIN_EMAIL) {
     return { error: null, success: null, toast: `Invalid email address ${process.env.ADMIN_EMAIL}` };
   }
@@ -29,3 +26,21 @@ export const login = async (prevState: unknown, formData: FormData) => {
 
   redirect('/')
 };
+
+
+export const signup = async (prevState: unknown, formData: FormData) => {
+  const result = loginSchema.safeParse(Object.fromEntries(formData.entries()));
+
+  if (result.success === false) {
+    return {
+      error: result.error.formErrors.fieldErrors,
+      success: null,
+      toast: null,
+    };
+  }
+
+  const data = result.data;
+
+  redirect('/create-profile')
+};
+

@@ -1,4 +1,5 @@
 import LoginForm from "@/components/login/login-form";
+import SocialAuthSection from "@/components/social-auth/SocialAuthSection";
 import Link from "next/link";
 import React from "react";
 
@@ -20,17 +21,8 @@ function LoginPage() {
       {/* form */}
       <LoginForm />
 
-      <p className="text-xs text-center">
-        By signing up, you agree to the{" "}
-        <Link href={""} className="text-primary underline">
-          Terms and Conditions
-        </Link>{" "}
-        and{" "}
-        <Link href={""} className="text-primary underline">
-          Privacy Policy
-        </Link>
-        .
-      </p>
+      <SocialAuthSection />
+
     </>
   );
 }

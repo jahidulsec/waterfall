@@ -16,7 +16,6 @@ const LoginForm = () => {
     if (data?.toast != null) {
       toast.error(data.toast);
     }
-    console.log(data?.toast);
   }, [data]);
 
   return (
