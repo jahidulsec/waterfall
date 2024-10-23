@@ -55,13 +55,13 @@ export default function ResetPasswordForm() {
         {errors.email && <p className="error-msg">{errors.email.message}</p>}
       </p>
 
-      <PasswordInput label="New password" {...register("password")}>
+      <PasswordInput id='password' label="New password" {...register("password")}>
         {errors.password && (
           <p className="error-msg">{errors.password.message}</p>
         )}
       </PasswordInput>
 
-      <PasswordInput label="Confirm your password" {...register("rePassword")}>
+      <PasswordInput id="rePassword" label="Confirm your password" {...register("rePassword")}>
         {errors.rePassword && (
           <p className="error-msg">{errors.rePassword?.message}</p>
         )}

@@ -20,19 +20,19 @@ function Steps() {
             <div
               className={`flex flex-col justify-between items-center gap-1 flex-1 ${
                 pathname.split("/").pop() == item.tab
-                  ? "text-secondary"
+                  ? "text-primary"
                   : "text-muted-foreground"
               }`}
             >
-              <h4 className={`text-xs h-10 md:h-5 text-center line-clamp-2 ${(index + 1) <= numOfStepsComplete ? 'text-secondary': ''}`}>
+              <h4 className={`text-xs h-10 md:h-5 text-center line-clamp-2 ${(index + 1) <= numOfStepsComplete ? 'text-primary': ''}`}>
                 {item.name}
               </h4>
               <div className="icon">
-                <Circle className={`size-4 ${(index + 1) <= numOfStepsComplete ? 'text-secondary fill-secondary': 'fill-background'}`} />
+                <Circle className={`size-4 ${(index + 1) <= numOfStepsComplete ? 'text-primary fill-primary': 'fill-background'}`} />
               </div>
             </div>
             {index + 1 != stage.length && (
-              <div className={`absolute left-[50%] bottom-[6px] w-[100%] h-[2px] -z-10 bg-muted  ${(index + 1) <= numOfStepsComplete ? 'bg-secondary': 'bg-muted'}`}></div>
+              <div className={`absolute left-[50%] bottom-[6px] w-[100%] h-[2px] -z-10 bg-muted  ${(index + 1) <= numOfStepsComplete ? 'bg-primary': 'bg-muted'}`}></div>
             )}
           </div>
         </Fragment>

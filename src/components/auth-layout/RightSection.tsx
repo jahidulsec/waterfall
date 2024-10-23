@@ -4,7 +4,7 @@ import LogoSection from "../infinite-scroll/InfiniteScroll";
 
 function RightSection() {
   return (
-    <section className="hidden md:block transition-all duration-500 h-full rounded-lg text-background p-3 xl:p-5">
+    <section className="hidden md:block md:sticky top-1 transition-all duration-500 h-full max-h-screen rounded-lg text-background p-3 xl:p-5">
       <div className="bg-primary flex flex-col justify-between h-full rounded-lg pt-10 lg:pt-[4rem] 2xl:pt-[8rem] px-10 lg:px-[4rem] relative">
         <div className="top">
           {/* header */}
