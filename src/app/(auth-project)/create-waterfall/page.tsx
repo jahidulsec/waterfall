@@ -1,7 +1,4 @@
-import { CircleOne, CircleTwo } from "@/components/assets/card";
-import CardSection from "@/components/create-project/CardSection";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
+import CardSection from "@/components/create-waterfall/CardSection";
 import React from "react";
 
 function CreateProfilePage() {
@@ -10,7 +7,7 @@ function CreateProfilePage() {
       {/* header */}
       <div className="mb-14">
         <p className="text-sm text-muted-foreground mb-3">
-          Create Merger Profile
+          Create new waterfall
         </p>
         <h1 className="text-3xl font-medium">Choose your first step</h1>
       </div>

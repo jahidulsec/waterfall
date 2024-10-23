@@ -11,7 +11,7 @@ function UploadDocumentForm() {
 
   return (
     <form className="flex flex-col gap-5 mb-10">
-      <DnDFileInput fileState={uploadedFiles} onFileChange={setUploadedFiles} />
+      <DnDFileInput accept=".xls,.xlsx" fileState={uploadedFiles} onFileChange={setUploadedFiles} />
 
       <div className="uploaded-files flex flex-col gap-5">
         {uploadedFiles &&

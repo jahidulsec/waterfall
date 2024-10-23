@@ -41,6 +41,6 @@ export const signup = async (prevState: unknown, formData: FormData) => {
 
   const data = result.data;
 
-  redirect('/create-profile')
+  redirect('/create-waterfall')
 };
 

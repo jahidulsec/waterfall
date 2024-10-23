@@ -6,12 +6,12 @@ export const stage = [
     },
     {
         id: 2,
-        name: 'Project Info',
-        tab: 'project-info'
+        name: 'Waterfall Info',
+        tab: 'waterfall-info'
     },
     {
         id: 3,
-        name: 'Company cap-table',
+        name: 'Company Cap-table',
         tab: 'cap-table'
     }
 ]

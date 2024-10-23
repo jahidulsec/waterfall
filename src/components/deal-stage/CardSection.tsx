@@ -13,7 +13,7 @@ function CardSection() {
       <Card
         className="w-[8rem]  group hover:border-secondary/50 hover:cursor-pointer"
         onClick={() => {
-          router.push(`/create-profile/stage/project-info`);
+          router.push(`/create-waterfall/stage/waterfall-info`);
         }}
       >
         <CardContent className="flex flex-col gap-3 p-4 pb-14 group-hover:bg-secondary/5">
@@ -32,7 +32,7 @@ function CardSection() {
       <Card
         className="w-[8rem]  group hover:border-secondary/50 hover:cursor-pointer"
         onClick={() => {
-          router.push(`/create-profile/stage/project-info`);
+          router.push(`/create-waterfall/stage/waterfall-info`);
         }}
       >
         <CardContent className="flex flex-col gap-3 p-4 pb-14 group-hover:bg-secondary/5">

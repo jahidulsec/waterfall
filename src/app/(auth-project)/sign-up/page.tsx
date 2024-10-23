@@ -7,7 +7,7 @@ export default function SignUpPage() {
   return (
     <>
       <div className="header mb-[3rem]">
-        <h1 className="text-3xl mb-0.5 font-medium">Waterfall Merger</h1>
+        <h1 className="text-3xl mb-0.5 font-medium">Merger Waterfall</h1>
         <p className="text-sm">
           If you have an account,{" "}
           <Link href={"/login"} className="text-primary">

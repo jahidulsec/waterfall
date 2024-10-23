@@ -7,7 +7,7 @@ import Link from "next/link";
 function ProjectForm() {
   return (
     <form className="flex flex-col gap-5 mb-10">
-      <Input label="Project Code Name" placeholder="Example" />
+      <Input label="Waterfall Code Name" placeholder="Example" />
       <Input label="Target Company Name" placeholder="One Bank" />
 
       <div>
@@ -28,10 +28,10 @@ function ProjectForm() {
 
       <div className="buttons flex justify-end gap-5 mt-10">
         <Button asChild variant={"outline"} type="button">
-          <Link href={"/create-profile/stage/deal"}>Previous</Link>
+          <Link href={"/create-waterfall/stage/deal"}>Previous</Link>
         </Button>
         <Button asChild type="button">
-          <Link href={"/create-profile/stage/cap-table"}>Continue</Link>
+          <Link href={"/create-waterfall/stage/cap-table"}>Continue</Link>
         </Button>
       </div>
     </form>
